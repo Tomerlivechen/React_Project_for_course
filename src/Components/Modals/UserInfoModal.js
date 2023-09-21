@@ -141,6 +141,7 @@ const UserInfoModal = ({ show, user, onHide }) => {
       };
       toggleAdduser(updateFormData, updatedUserInfo);
       setfieldAssist(initilizefieldAssist);
+      onHide();
     } else {
       const invalidFields = form.querySelectorAll(":invalid");
       const updatedFieldAssist = { ...initilizefieldAssist };

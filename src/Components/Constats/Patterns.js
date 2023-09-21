@@ -22,9 +22,12 @@ const patterns = [
     title: "Please enter a valid email address",
   },
   {
-    pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[!@#$%^&*-_]).{8,}$",
+    //  pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=(?:.*d){4})(?=.*[!@#$%^&*-_]).{8,}$", i tried to using this REGEX pattern but react didn't work properly using it
+    pattern: "^(?=(?:.*[a-zA-Z]){2})(?=(?:.*d){4}).{6,}$",
+    //   title:
+    //     "Password must contain at least one lowercase letter, one uppercase letter, four numbers, one of these symbols (!@#$%^&*-_*) and be at least 8 characters long.",
     title:
-      "Password must contain at least one lowercase letter, one uppercase letter, four numbers, one of these symbols (!@#$%^&*-_*) and be at least 8 characters long.",
+      "Password must contain at least one lowercase letter, one uppercase letter, four numbers, and be at least 6 characters long.",
   },
   {
     pattern: ".{1,}",
@@ -53,7 +56,7 @@ const formconstruction = {
   phone: ["phone", "text", "Phone*", patterns[2], false, true, 6, 12],
   email: ["email", "text", "E-mail*", patterns[4], false, true, 6, 12],
   email_closed: ["email", "text", "E-mail*", patterns[4], true, true, 6, 12],
-  password: ["password", "text", "Password*", patterns[6], false, true, 6, 12],
+  password: ["password", "text", "Password*", patterns[5], false, true, 6, 12],
   password_closed: [
     "password",
     "text",
@@ -90,7 +93,7 @@ const formconstruction = {
     12,
   ],
   zipCode: ["zipCode", "text", "Zip Code", "", false, false, 6, 12],
-  type: ["type", "text", "User Type", "", false, false, 6, 12],
+  type: ["type", "text", "User Type", patterns[6], false, false, 6, 12],
   note: ["note", "text", "Aditional info", "", false, false, 6, 12],
 };
 // field configurations to assist in the construction of the login modal
