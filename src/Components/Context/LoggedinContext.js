@@ -32,7 +32,6 @@ function LoggedinProvider({ children }) {
           localStorage.getItem("loggedintoken")
         );
         const gottenUserInfo = await getItems(decodedTokenValues.Email);
-
         const itemWithHighestDate = gottenUserInfo.reduce((prev, current) => {
           return prev.Date > current.Date ? prev : current;
         });
@@ -82,7 +81,6 @@ function LoggedinProvider({ children }) {
   const ReEnter = async (email) => {
     try {
       const gottenUserInfo = await getItems(email);
-
       const itemWithHighestDate = gottenUserInfo.reduce((prev, current) => {
         return prev.Date > current.Date ? prev : current;
       });

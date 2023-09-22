@@ -39,7 +39,7 @@ function UserProvider({ children }) {
       } finally {
         //After logging in the user, add the user info into an item because the API allows the users to only have Email, Name, and password (also Role, but Role is always Guest, so not really relevant)
         try {
-          await postItem(updateFormData.Email, data);
+          await postItem(updateFormData.Email, data, "Private");
         } catch (error) {
           console.error("Failed to post user data:", error);
         }

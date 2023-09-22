@@ -118,11 +118,11 @@ const deleteUser = (email) => {
     });
 };
 // Function to add an item
-const postItem = (itemCategory, data) => {
+const postItem = (itemCategory, data, scope = "Public") => {
   const token = fetchToken();
   const itemsInfo = {
     Data: { data },
-    Scope: "Public",
+    Scope: scope,
     Date: Date.now(),
   };
   return api

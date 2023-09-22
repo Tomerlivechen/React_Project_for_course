@@ -23,19 +23,18 @@ const patterns = [
   },
   {
     //  pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=(?:.*d){4})(?=.*[!@#$%^&*-_]).{8,}$", i tried to using this REGEX pattern but react didn't work properly using it
-    pattern: "^(?=(?:.*[a-zA-Z]){2})(?=(?:.*d){4}).{6,}$",
-    //   title:
-    //     "Password must contain at least one lowercase letter, one uppercase letter, four numbers, one of these symbols (!@#$%^&*-_*) and be at least 8 characters long.",
+    pattern:
+      "^(?=.*[a-z])(?=.*[A-Z])(?=(?:.*[0-9]){4})(?=.*[\\x21\\x40\\x23\\x24\\x25\\x5E\\x26\\x2A\\x2D\\x5F]).{8,}$",
     title:
-      "Password must contain at least one lowercase letter, one uppercase letter, four numbers, and be at least 6 characters long.",
+      "Password must contain at least one lowercase letter, one uppercase letter, four numbers, one of these symbols (!@#$%^&*-_*) and be at least 8 characters long.",
   },
   {
     pattern: ".{1,}",
     title: "This is a requierd field.",
   },
   {
-    pattern: "/^(User|Business)?$/",
-    title: "Input must be either 'User', 'Business', or empty",
+    pattern: "^(User|Business)?$",
+    title: "Input must be either 'User' or 'Business'",
   },
 ];
 
@@ -67,7 +66,16 @@ const formconstruction = {
     6,
     12,
   ],
-  image: ["image", "text", "Image URL *", patterns[3], false, true, 6, 12],
+  image: [
+    "image",
+    "text",
+    "Profile pic URL *",
+    patterns[3],
+    false,
+    true,
+    6,
+    12,
+  ],
   imagealt: [
     "imagealt",
     "text",
@@ -93,7 +101,7 @@ const formconstruction = {
     12,
   ],
   zipCode: ["zipCode", "text", "Zip Code", "", false, false, 6, 12],
-  type: ["type", "text", "User Type", patterns[6], false, false, 6, 12],
+  type: ["type", "text", "User Type*", patterns[7], false, true, 6, 12],
   note: ["note", "text", "Aditional info", "", false, false, 6, 12],
 };
 // field configurations to assist in the construction of the login modal
@@ -112,23 +120,41 @@ const loginConstruction = {
 };
 // field configurations to assist in the construction of the card modal
 const cardFromConstruction = {
-  title: ["title", "text", "Title", patterns[0], false, true, 12, 12],
-  subtitle: ["subtitle", "text", "Subtitle", patterns[1], false, true, 12, 12],
+  title: ["title", "text", "Title *", patterns[0], false, true, 12, 12],
+  subtitle: [
+    "subtitle",
+    "text",
+    "Subtitle *",
+    patterns[1],
+    false,
+    true,
+    12,
+    12,
+  ],
   description: [
     "description",
     "textarea",
-    "Description",
+    "Description *",
     patterns[6],
     false,
     true,
     12,
     12,
   ],
-  phone: ["phone", "text", "Phone", patterns[2], false, true, 6, 12],
-  email: ["email", "text", "Email", patterns[4], false, true, 6, 12],
-  web: ["web", "text", "Website", patterns[3], false, true, 12, 12],
-  image: ["image", "text", "Image Link", patterns[3], false, true, 6, 12],
-  imagealt: ["imagealt", "text", "Image-Alt", patterns[6], false, true, 6, 12],
+  phone: ["phone", "text", "Phone *", patterns[2], false, true, 6, 12],
+  email: ["email", "text", "Email *", patterns[4], false, true, 6, 12],
+  web: ["web", "text", "Website *", patterns[3], false, true, 12, 12],
+  image: ["image", "text", "Image Link *", patterns[3], false, true, 6, 12],
+  imagealt: [
+    "imagealt",
+    "text",
+    "Image-Alt *",
+    patterns[6],
+    false,
+    true,
+    6,
+    12,
+  ],
   state: ["state", "text", "State", patterns[6], false, false, 6, 12],
   country: ["country", "text", "Country", patterns[6], false, false, 6, 12],
   city: ["city", "text", "City", patterns[6], false, false, 6, 12],
