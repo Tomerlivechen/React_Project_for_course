@@ -1,5 +1,5 @@
-import { useState, useContext, useEffect } from "react";
-import { Modal, Button, Form, FormFloating, Col, Row } from "react-bootstrap";
+import { useState, useContext } from "react";
+import { Modal, Button, Form, Col } from "react-bootstrap";
 import { ThemeContext } from "../Context/ThemeContext";
 import { loginConstruction } from "../Constats/Patterns";
 import { LoggedinContext } from "../Context/LoggedinContext";

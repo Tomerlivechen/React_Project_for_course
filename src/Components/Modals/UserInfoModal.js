@@ -1,6 +1,6 @@
 import { useState, useContext, useEffect } from "react";
-import { Modal, Button, Form, FormFloating, Col, Row } from "react-bootstrap";
-import { patterns, formconstruction } from "../Constats/Patterns";
+import { Modal, Button, Form, Col, Row } from "react-bootstrap";
+import { formconstruction } from "../Constats/Patterns";
 import { ThemeContext } from "../Context/ThemeContext";
 import { UserContext } from "../Context/UserContext";
 import { LoggedinContext } from "../Context/LoggedinContext";
@@ -11,8 +11,7 @@ const UserInfoModal = ({ show, user, onHide }) => {
   // Function to edit users from Context
   const { toggleAdduser, toggleEddituser } = useContext(UserContext);
   // Context for logged-in user information
-  const { Loggedin, userInfo, setUserInfo, setLoggedin } =
-    useContext(LoggedinContext);
+  const { userInfo, setUserInfo, setLoggedin } = useContext(LoggedinContext);
   // Set bas values for formData to fit the API requirements
   const [formData, setFormData] = useState({
     Role: "",

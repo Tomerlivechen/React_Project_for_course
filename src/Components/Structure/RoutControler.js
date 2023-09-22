@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "../Context/ThemeContext";
 import { NavBar } from "./NavBar";
 import { FooterBar } from "./FooterBar";

@@ -1,9 +1,9 @@
 import Button from "react-bootstrap/Button";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useContext } from "react";
 
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ThemeContext } from "../Context/ThemeContext";
 import { LoggedinContext } from "../Context/LoggedinContext";
 import { CardDesignModal } from "../Modals/CardCreationModal";

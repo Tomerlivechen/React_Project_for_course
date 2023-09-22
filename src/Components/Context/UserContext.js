@@ -1,12 +1,10 @@
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext } from "react";
 import {
-  ProjectID,
   registerUser,
   updateUser,
   loginUser,
   postItem,
   updateItem,
-  deleteItem,
 } from "../Constats/APICommands";
 // Create a context
 const UserContext = createContext();

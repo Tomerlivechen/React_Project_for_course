@@ -1,14 +1,6 @@
 import { createContext, useState, useEffect } from "react";
-import {
-  ProjectID,
-  registerUser,
-  updateUser,
-  loginUser,
-  postItem,
-  getItems,
-} from "../Constats/APICommands";
+import { loginUser, getItems } from "../Constats/APICommands";
 import jwt_decode from "jwt-decode";
-import { ErrorLoginModal } from "../Modals/ErrorLoginModal";
 // Create a context
 const LoggedinContext = createContext();
 // Define LoggedinProvider
