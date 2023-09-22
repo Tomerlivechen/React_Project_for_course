@@ -41,14 +41,18 @@ const ChosenCardObject = ({ chosen, setchosen }) => {
   return (
     <>
       {/* Main container for the chosen card */}
-      <div className={themeProps.FooterBarMain} style={{ height: "100vh" }}>
+      <div className={themeProps.ModalBG} style={{ height: "100vh" }}>
         <div className="container">
           {/* Chosen card object */}
-          <Card bg={themeProps.NavbarMain} style={{ fontSize: "18px" }}>
+          <Card
+            bg={themeProps.NavbarMain}
+            style={{ fontSize: "20px" }}
+            border={`${themeProps.ModalBorderStyle}`}
+          >
             <Card.Img
               src={chosen.Data.data.image}
               alt={chosen.Data.data.imagealt}
-              style={{ height: "20vh", objectFit: "cover" }}
+              style={{ height: "20vh", width: "100%", objectFit: "cover" }}
             />
             <Card.Body className={themeProps.CardBG}>
               <Card.Title className="text-center">

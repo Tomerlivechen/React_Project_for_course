@@ -33,9 +33,8 @@ const CardConstruction = ({
           src={card.Data.data.image}
           alt={card.Data.data.imagealt}
           style={{
-            height: "40%",
+            height: "auto",
             width: "100%",
-            objectFit: "cover",
           }}
         />
         <Card.Body

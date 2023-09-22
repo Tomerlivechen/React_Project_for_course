@@ -74,7 +74,9 @@ function MainPage() {
     // If a card is chosen the display will change
     return (
       <>
+        <div style={{ height: "7vh" }} className={themeProps.ModalBG}></div>
         <ChosenCardObject chosen={chosen} setchosen={setchosen} />
+        <div style={{ height: "15vh" }} className={themeProps.ModalBG}></div>
       </>
     );
   } else if (!chosen) {
