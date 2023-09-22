@@ -26,7 +26,7 @@ function CardsProvider({ children }) {
   const [cardsList, setCardsList] = useState("");
   const [filters, setFilters] = useState("");
   const [storedCardsList, setStoredCardsList] = useState("");
-  // Function to stored cards list from API
+  // Function to get stored cards list from API
   const getStoredCardsList = async () => {
     const catagory = "Cards";
     setLoading(true);

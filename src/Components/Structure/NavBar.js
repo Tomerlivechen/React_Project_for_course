@@ -79,7 +79,7 @@ function NavBar() {
             </Navbar.Brand>
           </Col>
           <Nav className="me-auto ms-5">
-            <Nav.Link onClick={() => navigate("about")}>Abuot</Nav.Link>
+            <Nav.Link onClick={() => navigate("about")}>About</Nav.Link>
             {Loggedin.Usertype === "user" ||
             Loggedin.Usertype === "Business" ||
             Loggedin.Usertype === "Admin" ? (
