@@ -33,7 +33,7 @@ const patterns = [
     title: "This is a requierd field.",
   },
   {
-    pattern: "^(User|Business)?$",
+    pattern: "^(User|Business|Admin)?$",
     title: "Input must be either 'User' or 'Business'",
   },
 ];

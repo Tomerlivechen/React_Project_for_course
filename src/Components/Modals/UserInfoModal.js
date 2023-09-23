@@ -108,6 +108,7 @@ const UserInfoModal = ({ show, user, onHide }) => {
         Usertype: mUserInfo.type,
       }));
       setfieldAssist(initilizefieldAssist);
+      onHide();
     } else {
       const invalidFields = form.querySelectorAll(":invalid");
       const updatedFieldAssist = { ...initilizefieldAssist };
