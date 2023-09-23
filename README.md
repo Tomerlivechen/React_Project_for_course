@@ -6,7 +6,7 @@
 - [Usage](#Usage)
 - [Author](#Author)
 - [License](#license)
-- [Disclaimer](# Disclaimer)
+- [Disclaimer](#Disclaimer)
 
 ## Installation
 
