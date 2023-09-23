@@ -95,6 +95,12 @@ When a card is selected, it provides further information and options:
 - Visit the web address on the business card.
 - Access Google's geolocation associated with the card.
 
+### Note
+
+Due to current API limitations, it is only possible to create non-Guest API users on the [crudconnect](https://crudconnect.com/) website. The user type authentication and privileges are not connected to the userbase accounts on the API accounts user types, thus making it impossible to create a new Admin account that will be granted privileges of changing user roles on the crud connect account.
+
+- This information is correct as of the admission date on 23/09/2023.
+
 ## Author
 
 [Dr. Tomer Chen](https://github.com/Tomerlivechen)
