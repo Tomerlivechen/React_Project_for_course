@@ -142,7 +142,7 @@ function NavBar() {
                     variant={themeProps.NavBarButtons}
                     onClick={openUserModal}
                   >
-                    Edit user info
+                    Edit User Info
                   </Button>
 
                   <UserInfoModal
