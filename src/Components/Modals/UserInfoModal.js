@@ -102,6 +102,7 @@ const UserInfoModal = ({ show, user, onHide }) => {
   const handleEditUser = () => {
     const form = document.getElementById("userInputForm");
     if (form.checkValidity()) {
+      //Making sure a user cannot just redefine themselves as Admin without knowing the method
       let updatedUserInfo = { ...mUserInfo, type: userInfo.type };
       if (mUserInfo.type !== userInfo.type) {
         if (mUserInfo.type === "Admin") {
