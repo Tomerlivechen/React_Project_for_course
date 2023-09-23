@@ -106,7 +106,7 @@ function MainPage() {
               {/* Rendering the cards */}
               {cardsList.map((card) => (
                 <Col
-                  key={card.cardID}
+                  key={card.ItemID}
                   className="xs={12} md={4} lg={4} xl={4} m-1 p-0"
                   style={{
                     height: 600,
