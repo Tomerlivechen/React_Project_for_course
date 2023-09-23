@@ -103,19 +103,20 @@ const UserInfoModal = ({ show, user, onHide }) => {
     const form = document.getElementById("userInputForm");
     if (form.checkValidity()) {
       //Making sure a user cannot just redefine themselves as Admin without knowing the method
-      let updatedUserInfo = { ...mUserInfo, type: userInfo.type };
+      let updatedUserInfo = { ...mUserInfo };
       if (mUserInfo.type !== userInfo.type) {
         if (mUserInfo.type === "Admin") {
-          if (mUserInfo.note === "Admin")
+          if (mUserInfo.note === "Admin") {
             updatedUserInfo = { ...mUserInfo, type: "Admin" };
+          } else {
+            updatedUserInfo = { ...mUserInfo, type: userInfo.type };
+          }
         } else {
-          updatedUserInfo = { ...mUserInfo, type: userInfo.type };
+          updatedUserInfo = { ...mUserInfo };
         }
-      } else {
-        updatedUserInfo = { ...mUserInfo, type: userInfo.type };
       }
       toggleEddituser(updatedUserInfo);
-      setUserInfo((prevUserInfo) => ({ ...prevUserInfo, ...mUserInfo }));
+      setUserInfo((prevUserInfo) => ({ ...prevUserInfo, ...updatedUserInfo }));
       if (Loggedin.Usertype !== mUserInfo.type) {
         setLoggedin((prevLoggedin) => ({
           ...prevLoggedin,
