@@ -33,8 +33,12 @@ const patterns = [
     title: "This is a requierd field.",
   },
   {
-    pattern: "^(User|Business|Admin)?$",
+    pattern: "^(User|Business)?$",
     title: "Input must be either 'User' or 'Business'",
+  },
+  {
+    pattern: "^(User|Business|Admin)?$",
+    title: "Input must be either 'User' or 'Business' or 'Admin'",
   },
 ];
 
@@ -102,6 +106,7 @@ const formconstruction = {
   ],
   zipCode: ["zipCode", "text", "Zip Code", "", false, false, 6, 12],
   type: ["type", "text", "User Type*", patterns[7], false, true, 6, 12],
+  type_edit: ["type", "text", "User Type*", patterns[8], false, true, 6, 12],
   note: ["note", "text", "Aditional info", "", false, false, 6, 12],
 };
 // field configurations to assist in the construction of the login modal

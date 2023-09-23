@@ -11,7 +11,8 @@ const UserInfoModal = ({ show, user, onHide }) => {
   // Function to edit users from Context
   const { toggleAdduser, toggleEddituser } = useContext(UserContext);
   // Context for logged-in user information
-  const { userInfo, setUserInfo, setLoggedin } = useContext(LoggedinContext);
+  const { userInfo, setUserInfo, setLoggedin, Loggedin } =
+    useContext(LoggedinContext);
   // Set bas values for formData to fit the API requirements
   const [formData, setFormData] = useState({
     Role: "",
@@ -101,12 +102,25 @@ const UserInfoModal = ({ show, user, onHide }) => {
   const handleEditUser = () => {
     const form = document.getElementById("userInputForm");
     if (form.checkValidity()) {
-      toggleEddituser(mUserInfo);
+      let updatedUserInfo = { ...mUserInfo, type: userInfo.type };
+      if (mUserInfo.type !== userInfo.type) {
+        if (mUserInfo.type === "Admin") {
+          if (mUserInfo.note === "Admin")
+            updatedUserInfo = { ...mUserInfo, type: "Admin" };
+        } else {
+          updatedUserInfo = { ...mUserInfo, type: userInfo.type };
+        }
+      } else {
+        updatedUserInfo = { ...mUserInfo, type: userInfo.type };
+      }
+      toggleEddituser(updatedUserInfo);
       setUserInfo((prevUserInfo) => ({ ...prevUserInfo, ...mUserInfo }));
-      setLoggedin((prevLoggedin) => ({
-        ...prevLoggedin,
-        Usertype: mUserInfo.type,
-      }));
+      if (Loggedin.Usertype !== mUserInfo.type) {
+        setLoggedin((prevLoggedin) => ({
+          ...prevLoggedin,
+          Usertype: updatedUserInfo.type,
+        }));
+      }
       setfieldAssist(initilizefieldAssist);
       onHide();
     } else {
@@ -249,7 +263,11 @@ const UserInfoModal = ({ show, user, onHide }) => {
             {constructionAssiste(formconstruction.zipCode)}
           </Row>
           <Row>
-            {constructionAssiste(formconstruction.type)}
+            {user ? (
+              <>{constructionAssiste(formconstruction.type_edit)}</>
+            ) : (
+              <>{constructionAssiste(formconstruction.type)}</>
+            )}
             {constructionAssiste(formconstruction.note)}
           </Row>
         </Form>
