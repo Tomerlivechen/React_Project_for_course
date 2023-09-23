@@ -135,10 +135,15 @@ function NavBar() {
                   <Image
                     src={userInfo.image}
                     alt={userInfo.imagealt}
-                    onClick={openUserModal}
                     roundedCircle={true}
                     style={{ width: "40px", height: "40px" }}
                   />
+                  <Button
+                    variant={themeProps.NavBarButtons}
+                    onClick={openUserModal}
+                  >
+                    Edit user info
+                  </Button>
 
                   <UserInfoModal
                     show={showUserModal}
