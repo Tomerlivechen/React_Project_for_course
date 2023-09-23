@@ -20,6 +20,13 @@ const CardConstruction = ({
   const [showCardEditModal, setshowCardEditModal] = useState(false);
   //Function to open the card edit modal.
   const openCardModal = () => setshowCardEditModal(true);
+  //Function to limit the length of dysplayed text to no creat shifting in card structur
+  function truncateText(text, maxLength) {
+    if (text.length > maxLength) {
+      return text.substring(0, maxLength) + "...";
+    }
+    return text;
+  }
   return (
     <>
       {/*  Card object */}
@@ -42,10 +49,10 @@ const CardConstruction = ({
           onClick={() => setchosen(card)}
         >
           <Card.Title>
-            <h2>{card.Data.data.title}</h2>
+            <h2>{truncateText(card.Data.data.title, 13)}</h2>
           </Card.Title>
           <Card.Subtitle>
-            <h4>{card.Data.data.subtitle}</h4>
+            <h4>{truncateText(card.Data.data.subtitle, 16)}</h4>
           </Card.Subtitle>
           <hr />
 

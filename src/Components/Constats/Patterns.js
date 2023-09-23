@@ -120,12 +120,12 @@ const loginConstruction = {
 };
 // field configurations to assist in the construction of the card modal
 const cardFromConstruction = {
-  title: ["title", "text", "Title *", patterns[0], false, true, 12, 12],
+  title: ["title", "text", "Title *", patterns[6], false, true, 12, 12],
   subtitle: [
     "subtitle",
     "text",
     "Subtitle *",
-    patterns[1],
+    patterns[6],
     false,
     true,
     12,
