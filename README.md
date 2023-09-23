@@ -61,15 +61,15 @@ Admin users have all the privileges mentioned above. Additionally, they can:
 
 - Edit or delete any business card.
 - Edit other users' names and passwords (Current API limitations).
-- Delete any user.
+- Delete any user. (Current API limitations)
 
 ### Interaction with Business Cards
 
 All Users:
 
 - View all business cards.
-- Access an expanded card mode.
 - Use the call function to contact the phone number on the card.
+- Access the expanded card mode and use all fetures therein.
 
 Registered Users:
 
