@@ -1,4 +1,4 @@
-# React .Net Course Busness Cards final project
+# React .Net Course Busness Cards Final Project
 
 ## Table of Contents
 
@@ -6,10 +6,11 @@
 - [Usage](#Usage)
 - [Author](#Author)
 - [License](#license)
+- [Disclaimer](# Disclaimer)
 
 ## Installation
 
-## Getting Started
+### Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -23,7 +24,7 @@ These instructions will get you a copy of the project up and running on your loc
 2. Navigate to the project directory.
 3. Install dependencies.
 
-## Dependencies
+### Dependencies
 
 This project uses the following libraries and frameworks:
 
@@ -59,7 +60,7 @@ The app will now be running on [http://localhost:3000](http://localhost:3000).
 Admin users have all the privileges mentioned above. Additionally, they can:
 
 - Edit or delete any business card.
-- Edit other users' names and passwords (subject to API limitations).
+- Edit other users' names and passwords (Current API limitations).
 - Delete any user.
 
 ### Interaction with Business Cards
@@ -97,3 +98,11 @@ When a card is selected, it provides further information and options:
 ## Author
 
 [Dr. Tomer Chen](https://github.com/Tomerlivechen)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Disclaimer
+
+I take no responsibility for the use of this software outside of the examination of this project by HackerU examination personnel.
