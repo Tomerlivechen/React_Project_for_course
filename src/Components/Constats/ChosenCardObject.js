@@ -1,14 +1,14 @@
 import { Button, Card, Col, Row } from "react-bootstrap";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../Context/ThemeContext";
 import { CardsContext } from "../Context/CardContext";
 import QRCode from "qrcode.react";
 
 const ChosenCardObject = ({ chosen, setchosen }) => {
   // Context for managing card list
-  const { loading, cardsList } = useContext(CardsContext);
+  const { cardsList } = useContext(CardsContext);
   // Context for managing color theme
-  const { themeProps, theme, toggleTheme } = useContext(ThemeContext);
+  const { themeProps } = useContext(ThemeContext);
   // Function to handle moving to the previous card
   const handlePrev = () => {
     const currentIndex = cardsList.findIndex(

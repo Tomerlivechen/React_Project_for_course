@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useState, useEffect } from "react";
 import DarklogoImage from "../Images/Cards logo Dark.png";
 import LightlogoImage from "../Images/Cards logo Light.png";
 // Create a context

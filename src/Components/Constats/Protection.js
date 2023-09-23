@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { LoggedinContext } from "../Context/LoggedinContext";
 import { useContext, useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";

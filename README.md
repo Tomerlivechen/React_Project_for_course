@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# React .Net Course Busness Cards final project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Installation](#installation)
+- [Usage](#Usage)
+- [Author](#Author)
+- [License](#license)
 
-In the project directory, you can run:
+## Installation
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Node.js and npm (Node Package Manager) should be installed on your machine. You can download and install them from [https://nodejs.org/](https://nodejs.org/).
+
+### Installing
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies.
+
+## Dependencies
+
+This project uses the following libraries and frameworks:
+
+- [React](https://reactjs.org/)
+- [React Bootstrap](https://react-bootstrap.github.io/)
+- [Bootstrap Icons](https://icons.getbootstrap.com/)
+- [axios](https://axios-http.com/)
+- [qrcode.react](https://www.npmjs.com/package/qrcode.react)
+- [jwt-decode](https://www.npmjs.com/package/jwt-decode)
+- [React Router DOM](https://reactrouter.com/)
+
+### `npm install`
+
+Start the development server.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The app will now be running on [http://localhost:3000](http://localhost:3000).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-### `npm test`
+### User Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Create profiles on the App.
+- Create personal business cards.
+- View cards created by other users.
+- Search for cards by title.
+- Filter cards by favorites or cards created by the user.
+- Edit personal information after creating the user profile.
 
-### `npm run build`
+### Admin Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Admin users have all the privileges mentioned above. Additionally, they can:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Edit or delete any business card.
+- Edit other users' names and passwords (subject to API limitations).
+- Delete any user.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Interaction with Business Cards
 
-### `npm run eject`
+All Users:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- View all business cards.
+- Access an expanded card mode.
+- Use the call function to contact the phone number on the card.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Registered Users:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Favorite any business card.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Registered Business Users:
 
-## Learn More
+- Creat their own business cards
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Edit or delete their own business cards.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Admin Users:
 
-### Code Splitting
+- Edit or delete all business cards.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Expanded Card Mode
 
-### Analyzing the Bundle Size
+When a card is selected, it provides further information and options:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- View the expanded card information
+- Call the phone number on the business card.
+- Send an E-mail to the provided E-mail address.
+- Visit the web address on the business card.
+- Access Google's geolocation associated with the card.
 
-### Making a Progressive Web App
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Dr. Tomer Chen](https://github.com/Tomerlivechen)
